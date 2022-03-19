@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "159373405042",
+    "firebase_url": "https://testproject-neatappsse.firebaseio.com",
+    "project_id": "testproject-neatappsse",
+    "storage_bucket": "testproject-neatappsse.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159373405042:android:9963b6a1e6d2daf89e4beb",
+        "android_client_info": {
+          "package_name": "ru.neatapps.minesweeper3d.v2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "159373405042-qbhqtur81meap22unn42ja3vftgjus6b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVyGqR_vfOX3rUDAHp5x0uFxqIr_vqrI4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "159373405042-qbhqtur81meap22unn42ja3vftgjus6b.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "159373405042-oslh8e3i6mt0k0gdk2phkhknethtem2u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ru.neatappsse.firebase"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159373405042:android:1b961606f6650cc69e4beb",
+        "android_client_info": {
+          "package_name": "ru.neatappsse.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "159373405042-qbhqtur81meap22unn42ja3vftgjus6b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVyGqR_vfOX3rUDAHp5x0uFxqIr_vqrI4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "159373405042-qbhqtur81meap22unn42ja3vftgjus6b.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "159373405042-oslh8e3i6mt0k0gdk2phkhknethtem2u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ru.neatappsse.firebase"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
