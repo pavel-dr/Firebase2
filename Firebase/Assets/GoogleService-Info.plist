@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>159373405042-oslh8e3i6mt0k0gdk2phkhknethtem2u.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.159373405042-oslh8e3i6mt0k0gdk2phkhknethtem2u</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAwR1JUtp4cGJqEktRDZAZQbqRdvBXyyv8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>159373405042</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ru.neatappsse.firebase</string>
+	<key>PROJECT_ID</key>
+	<string>testproject-neatappsse</string>
+	<key>STORAGE_BUCKET</key>
+	<string>testproject-neatappsse.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:159373405042:ios:3f912510a73e28ab9e4beb</string>
+	<key>DATABASE_URL</key>
+	<string>https://testproject-neatappsse.firebaseio.com</string>
+</dict>
+</plist>

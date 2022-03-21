@@ -10,7 +10,8 @@ using UnityEngine.UI;
 //https://firebase.google.com/docs/database/unity/save-data?authuser=0
 public class TestFirebase : MonoBehaviour
 {
-
+    public User user1;
+    public User user2;
 
     public Text textOldGot;
     public Text textCur;
@@ -28,7 +29,7 @@ public class TestFirebase : MonoBehaviour
         {
             Debug.Log("k1=" + toggle.isOn);
             PlayerPrefs.SetInt("k1", toggle.isOn ? 1 : 0);
-            //SetEditorDatabaseUrl();
+            SetEditorDatabaseUrl();
         }
         get {
             Debug.Log("k1=" + (PlayerPrefs.GetInt("k1", 0) == 1));
@@ -43,7 +44,7 @@ public class TestFirebase : MonoBehaviour
     void Start()
     {
         toggle.isOn = Dotliner;
-        //SetEditorDatabaseUrl();
+        SetEditorDatabaseUrl();
         // Set this before calling into the realtime database.
 
 
@@ -89,56 +90,56 @@ public class TestFirebase : MonoBehaviour
 
     }
 
-    //public void WriteNewUser()
-    //{
-    //    WriteNewUser(SystemInfo.deviceUniqueIdentifier, SystemInfo.deviceName, SystemInfo.deviceName + "@gmail.com");
-    //}
+    public void WriteNewUser()
+    {
+        WriteNewUser(SystemInfo.deviceUniqueIdentifier, SystemInfo.deviceName, SystemInfo.deviceName + "@gmail.com");
+    }
 
 
-    //private void WriteNewUser(string userId, string name, string email)
-    //{
-    //    User user = new User(name, email);
-    //    string json = JsonUtility.ToJson(user);
-    //    DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
-    //    reference.Child("users").Child(userId).SetRawJsonValueAsync(json);
+    private void WriteNewUser(string userId, string name, string email)
+    {
+        User user = new User(name, email);
+        string json = JsonUtility.ToJson(user);
+        DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
+        reference.Child("users").Child(userId).SetRawJsonValueAsync(json);
 
-    //    //DatabaseReference reference2 = FirebaseDatabase.DefaultInstance.RootReference;
-    //    //reference2.Child("users").Child(userId).SetRawJsonValueAsync(json);
-    //    //reference.Child("users").Child(userId).Child("username").SetValueAsync(name);
+        //DatabaseReference reference2 = FirebaseDatabase.DefaultInstance.RootReference;
+        //reference2.Child("users").Child(userId).SetRawJsonValueAsync(json);
+        //reference.Child("users").Child(userId).Child("username").SetValueAsync(name);
 
-    //}
+    }
     DataSnapshot snapshot;
-    //private void GetUser(string userId, User user)
-    //{
-    //    FirebaseDatabase.DefaultInstance
-    //        .GetReference("users").Child(userId)
-    //        .GetValueAsync().ContinueWith(task => {
-    //            if (task.IsFaulted)
-    //            {
-    //                Debug.LogError(task.Exception.Message);
-    //                     // Handle the error...
-    //            }
-    //            else if (task.IsCompleted)
-    //            {
-    //                snapshot = task.Result;
-    //                Debug.Log(task.Result.GetValue(true));
-    //                Debug.Log(task.Result.GetValue(false));
+    private void GetUser(string userId, User user)
+    {
+        FirebaseDatabase.DefaultInstance
+            .GetReference("users").Child(userId)
+            .GetValueAsync().ContinueWith(task => {
+                if (task.IsFaulted)
+                {
+                    Debug.LogError(task.Exception.Message);
+                         // Handle the error...
+                }
+                else if (task.IsCompleted)
+                {
+                    snapshot = task.Result;
+                    Debug.Log(task.Result.GetValue(true));
+                    Debug.Log(task.Result.GetValue(false));
                     
-    //                //Debug.Log(snapshot.Value.ToString());
-    //                foreach (var a in (Dictionary<string, object>)snapshot.Value)
-    //                {
-    //                    Debug.Log(a.Key + "=" + a.Value);
-    //                }
+                    //Debug.Log(snapshot.Value.ToString());
+                    foreach (var a in (Dictionary<string, object>)snapshot.Value)
+                    {
+                        Debug.Log(a.Key + "=" + a.Value);
+                    }
 
-    //                user = JsonUtility.FromJson<User>(snapshot.Value.ToString());
-    //                     // Do something with snapshot...
-    //            }
-    //        });
+                    user = JsonUtility.FromJson<User>(snapshot.Value.ToString());
+                         // Do something with snapshot...
+                }
+            });
 
 
-    //    //reference.Child("users").Child(userId).Child("username").SetValueAsync(name);
+        //reference.Child("users").Child(userId).Child("username").SetValueAsync(name);
 
-    //}
+    }
     //private void Update()
     //{
     //    if (snapshot != null)
@@ -199,18 +200,18 @@ public class TestFirebase : MonoBehaviour
         textGot.text = qweGot.ToString();
     }
 
-    //public void SetEditorDatabaseUrl()
-    //{
-    //    //Firebase.FirebaseApp.
-    //    //if (Dotliner)
-    //    //{
-    //    //    FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://dotliner-70536380.firebaseio.com/");
-    //    //}
-    //    //else
-    //    //{
-    //    //    FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://testproject-neatappsse.firebaseio.com/");
-    //    //}
-    //}
+    public void SetEditorDatabaseUrl()
+    {
+        //Firebase.FirebaseApp.
+        //if (Dotliner)
+        //{
+        //    FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://dotliner-70536380.firebaseio.com/");
+        //}
+        //else
+        //{
+        //    FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://testproject-neatappsse.firebaseio.com/");
+        //}
+    }
 
 
 }
